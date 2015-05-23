@@ -11,4 +11,17 @@ public class ShieldControl : MonoBehaviour
 		Debug.Log ("Beaow");
 	}
 
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Projectile")
+		{
+			//if (!other.gameObject.GetComponent<Projectile>().hasInteracted)
+			//{
+				GetComponentInParent<Fighter>().AbsorbAmmo();
+				GetComponentInParent<Fighter>().AbsorbAmmo();
+				//other.gameObject.GetComponent<Projectile>().hasInteracted = true;
+				Destroy (other.gameObject);
+			//}
+		}
+	}
 }

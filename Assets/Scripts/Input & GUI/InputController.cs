@@ -32,6 +32,7 @@ public class InputController : MonoBehaviour
 	}
 	//__________________________________________________________________________________________________
 
+	private Fighter p1; 
 	public KeyCode p1UpKey = KeyCode.W;
 	public KeyCode p1DownKey = KeyCode.S;
 	public KeyCode p1LeftKey = KeyCode.A;
@@ -41,24 +42,55 @@ public class InputController : MonoBehaviour
 
 	public KeyCode selectButton = KeyCode.Return;
 	public KeyCode backButton = KeyCode.Escape;
+	public bool reverseControls = false;
 
+	private Fighter p2;
 	public KeyCode p2UpKey = KeyCode.UpArrow;
 	public KeyCode p2DownKey = KeyCode.DownArrow;
 	public KeyCode p2LeftKey = KeyCode.LeftArrow;
 	public KeyCode p2RightKey = KeyCode.RightArrow;
-	public KeyCode p2FireKey = KeyCode.RightControl;
-	public KeyCode p2BoostKey = KeyCode.RightAlt;
+	public KeyCode p2FireKey = KeyCode.Comma;
+	public KeyCode p2BoostKey = KeyCode.Period;
 
 	private bool noInput = false;
 	private Quaternion p1Rotation = Quaternion.Euler (0, 0, 0);
 	private Quaternion p2Rotation = Quaternion.Euler (0, 0, 0);
 
+	private bool inputP1 = true;
+	private bool inputP2 = true;
 
+
+	public bool PrepareData()
+	{
+		p1 = MCP.singleton.GetPlayerOne ();
+		p2 = MCP.singleton.GetPlayerTwo ();
+		return true;
+	}
+	
 	void Update ()
 	{
-		bool noInput = false;
 		p1Rotation = GetRotationByKeys (p1UpKey, p1DownKey, p1LeftKey, p1RightKey);
+		bool noInput1 = noInput;
 		p2Rotation = GetRotationByKeys (p2UpKey, p2DownKey, p2LeftKey, p2RightKey);
+
+		if (reverseControls)
+		{
+			p1Rotation = Quaternion.Inverse(p1Rotation);
+			p2Rotation = Quaternion.Inverse(p2Rotation);
+		}
+
+		if (!p1.IsLocked ())
+		{
+			if (!noInput1) p1.Rotate(p1Rotation);
+			if (Input.GetKeyDown(p1FireKey)) p1.Fire();
+			if (Input.GetKeyDown (p1BoostKey)) p1.Boost ();
+		}
+		if (!p2.IsLocked ())
+		{
+			if (!noInput) p2.Rotate(p2Rotation);
+			if (Input.GetKeyDown(p2FireKey)) p2.Fire();
+			if (Input.GetKeyDown(p2BoostKey)) p2.Boost();
+		}
 	}
 
 	/// <summary>
@@ -72,46 +104,46 @@ public class InputController : MonoBehaviour
 	private Quaternion GetRotationByKeys(KeyCode up, KeyCode down, KeyCode left, KeyCode right)
 	{
 		noInput = false;
-		bool bothUD = false;
-		bool bothLR = false;
+		bool bothUD = false; //not needed
+		bool bothLR = false; //not needed
 
 		//iff UP button (including UP + any other button)
-		if(Input.GetKeyDown(up))
+		if(Input.GetKey(up))
 		{
-			if (Input.GetKeyDown(down)) bothUD = true; //break
+			if (Input.GetKey(down)) bothUD = true; //break
 
 
-			else if(Input.GetKeyDown(left))
+			else if(Input.GetKey(left))
 			{
-				if (Input.GetKeyDown(right)) bothLR = true; //break
+				if (Input.GetKey(right)) bothLR = true; //break
 				else return RotHelp(135); //upLeft
 			}
 
-			else if (Input.GetKeyDown(right)) return RotHelp (45); //up Right;
+			else if (Input.GetKey(right)) return RotHelp (45); //up Right;
 			else return RotHelp (90); //up
 		}
 
 		//iff UP button is not held, but DOWN is (including DOWN + any button except UP)
-		else if(Input.GetKeyDown(down))
+		else if(Input.GetKey(down))
 		{
-			if(Input.GetKeyDown(left))
+			if(Input.GetKey(left))
 			{
-				if (Input.GetKeyDown(right)) bothLR = true; //break
+				if (Input.GetKey(right)) bothLR = true; //break
 				else return RotHelp (225); //Down Left
 			}
-			else if (Input.GetKeyDown(right)) return RotHelp(315); //Down Right
+			else if (Input.GetKey(right)) return RotHelp(315); //Down Right
 			else return RotHelp(270); //down
 		}
 		//end UP/DOWN
 
 		//iff neither UP nor DOWN is held, but Left is (including LEFT + RIGHT)
-		if(Input.GetKeyDown(left))
+		if(Input.GetKey(left))
 		{
-			if (Input.GetKeyDown(right)) bothLR = true; //break
+			if (Input.GetKey(right)) bothLR = true; //break
 			else return RotHelp(180); //left
 		}
 		//iff only RIGHT is held 
-		else if(Input.GetKeyDown(right)) return RotHelp(0); //right
+		else if(Input.GetKey(right)) return RotHelp(0); //right
 
 		//iff nothing is held
 		noInput = true;
