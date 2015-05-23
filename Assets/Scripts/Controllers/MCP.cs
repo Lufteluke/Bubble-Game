@@ -37,13 +37,16 @@ public class MCP : MonoBehaviour {
 
 	private Fighter playerOne;
 	private Fighter playerTwo;
+	private GUIController guCon;
 
 	void Start()
 	{
-		//if (!InputController.singleton.PrepareData ()) Debug.LogError("Failed to prepare");
+		if (!InputController.singleton.PrepareData ()) Debug.LogError("Failed to prepare");
 		if (!AudioController.singleton.PrepareData ()) Debug.LogError("Failed to prepare");
-		if (!GetPlayerOne ().PrepareData ()) Debug.LogError("Failed to prepare");;
-		if (!GetPlayerTwo ().PrepareData ()) Debug.LogError("Failed to prepare");;
+		if (!GetPlayerOne ().PrepareData ()) Debug.LogError("Failed to prepare");
+		if (!GetPlayerTwo ().PrepareData ()) Debug.LogError("Failed to prepare");
+
+		if (!GetGuCon ().PrepareData ()) Debug.LogError("Failed to prepare");
 
 		StartGame ();
 	}
@@ -69,9 +72,14 @@ public class MCP : MonoBehaviour {
 			if (player.RemoveLifeAndReportSurvival())
 			{
 				StartCoroutine(RespawnWithDelay());
+				player.Loss();
+				other.Victory();
 			}
 		}
-		else Debug.LogWarning("Post mortem!");
+		else
+		{
+			Debug.LogWarning("Post mortem!");
+		}
 	}
 
 	/// <summary>
@@ -80,6 +88,7 @@ public class MCP : MonoBehaviour {
 	/// <returns>The with delay.</returns>
 	IEnumerator RespawnWithDelay()
 	{
+		GetGuCon().UpdateHUD ();
 		yield return new WaitForSeconds(PlayerSettings.singleton.respawnDelay);
 		GetPlayerOne ().Respawn ();
 		GetPlayerTwo ().Respawn ();
@@ -106,6 +115,13 @@ public class MCP : MonoBehaviour {
 		if (playerTwo == null)
 				playerTwo = GameObject.FindWithTag ("Player 2").GetComponent<Fighter>();
 		return playerTwo;
+	}
+
+	public GUIController GetGuCon()
+	{
+		if (guCon == null)
+			guCon = GUIController.singleton;
+		return guCon;
 	}
 
 }

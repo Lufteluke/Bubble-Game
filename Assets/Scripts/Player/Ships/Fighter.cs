@@ -19,7 +19,12 @@ public class Fighter : MonoBehaviour
 
 	private Vector3 startingPosition;
 	private Quaternion startingRotaion;
-	//private Rigidbody2D rigidbody;
+	private Rigidbody2D rBody;
+	private PlayerSettings pS;
+	private ParticleSystem partSys;
+	private bool inputLocked = false;
+
+	private int score = 0;
 
 
 	/// <summary>
@@ -28,17 +33,26 @@ public class Fighter : MonoBehaviour
 	/// <returns><c>true</c>, if data was prepared, <c>false</c> otherwise.</returns>
 	public bool PrepareData()
 	{
-		Debug.Log ("Prepare to die");
+		pS = PlayerSettings.singleton;
 		cannon = GetComponentInChildren<FireControl>();
 		shield = GetComponentInChildren<ShieldControl>();
+		rBody = GetComponent<Rigidbody2D> ();
+		partSys = GetComponent<ParticleSystem>();
 
-		ammo = PlayerSettings.singleton.ammoOnStart;
-		boosts = PlayerSettings.singleton.boostsOnStart;
-		shields = PlayerSettings.singleton.shieldsOnStart;
-		lives = PlayerSettings.singleton.lives;
+		partSys.enableEmission = false;
+
+		ammo = pS.ammoOnStart;
+		boosts = pS.boostsOnStart;
+		shields = pS.shieldsOnStart;
+		lives = pS.lives;
+		rBody.mass = pS.rigidbodyMass;
+		rBody.angularDrag = pS.rigidbodyAngularDrag;
+		rBody.drag = pS.rigidbodyLinearDrag;
+
 
 		startingPosition = transform.position;
 		startingRotaion = transform.rotation;
+
 
 		return true;
 	}
@@ -87,17 +101,30 @@ public class Fighter : MonoBehaviour
 		}
 		ammo--;
 		cannon.Fire ();
-		Debug.Log ("Fires cannon on " + gameObject.name);
+		//Debug.Log ("Fires cannon on " + gameObject.name);
+		GUIController.singleton.UpdateHUD ();
 		return true;
 	}
 
 	/// <summary>
 	/// Activates shield on this ship, if loaded
 	/// </summary>
-	public bool Shield()
+	public bool ShieldImpact()
 	{
-		Debug.Log ("Deploys shield on " + gameObject.name);
-		return true;
+		if (shields < 1)
+		{
+			Kill ();
+			Debug.Log("Out of shields on " + gameObject.name);
+			GUIController.singleton.UpdateHUD ();
+			return false;
+		}
+		else
+		{
+			shields--;
+			Debug.Log ("Deploys shield on " + gameObject.name);
+			GUIController.singleton.UpdateHUD ();
+			return true;
+		}
 	}
 
 	/// <summary>
@@ -105,8 +132,36 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public bool Boost()
 	{
+		if (!pS.unlimitedBoosts)
+		{
+			if (boosts < 1)
+			{
+				Debug.Log("phfl, no boost " + gameObject.name);
+				return false;
+			}
+		}
+		rBody.AddRelativeForce(new Vector2(pS.movementSpeed,0));
+
+		boosts--;
 		Debug.Log ("Deploys boost on " + gameObject.name);
+		GUIController.singleton.UpdateHUD ();
 		return true;
+	}
+
+	public void AbsorbAmmo()
+	{
+		ammo++;
+		GUIController.singleton.UpdateHUD ();
+	}
+
+	public void LockInput(bool yesNo)
+	{
+		inputLocked = yesNo;
+	}
+
+	public bool IsLocked()
+	{
+		return inputLocked;
 	}
 
 	/// <summary>
@@ -114,7 +169,10 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Kill ()
 	{
+		LockInput (true);
 		MCP.singleton.KillPlayer (this);
+		rBody.gravityScale = 0.2f;
+		partSys.enableEmission = true;
 	}
 	
 	/// <summary>
@@ -124,6 +182,7 @@ public class Fighter : MonoBehaviour
 	public bool RemoveLifeAndReportSurvival ()
 	{
 		lives--;
+		GUIController.singleton.UpdateHUD ();
 		return (lives > 0);
 	}
 
@@ -141,6 +200,7 @@ public class Fighter : MonoBehaviour
 	public void Victory()
 	{
 		Debug.Log ("Yay! " + gameObject.name + " wins!");
+		score++;
 	}
 
 	/// <summary>
@@ -148,14 +208,23 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Respawn()
 	{
+		LockInput (false);
 		dead = false;
+		partSys.enableEmission = false;
+		rBody.gravityScale = 0;
+		boosts = pS.boostsOnStart;
+		shields = pS.shieldsOnStart;
+		ammo = pS.ammoOnStart;
+		rBody.velocity = new Vector3 (0, 0, 0);
+		rBody.rotation = 0;
 		transform.position = startingPosition;
 		transform.rotation = startingRotaion;
+		GUIController.singleton.UpdateHUD ();
 	}
 		
 
 	/// <summary>
-	/// Aims the ship.
+	/// Aims the ship. Towards mouse, for example
 	/// </summary>
 	/// <param name="vector">Vector.</param>
 	public void AimTowards (Vector3 vector)
@@ -164,12 +233,41 @@ public class Fighter : MonoBehaviour
 		transform.LookAt (vector);
 	}
 
-	/// <summary>
-	/// Applies force to the ship
-	/// </summary>
-	/// <param name="vector">Vector.</param>
-	public void ApplyForce(Vector3 vector)
+	public int GetScore ()
 	{
-		GetComponent<Rigidbody2D> ().AddForce (vector);
+		return score;
+	}
+
+	public int GetAmmo ()
+	{
+		return ammo;
+	}
+
+	public int GetShields()
+	{
+		return shields;
+	}
+
+	/// <summary>
+	/// Aims the ship in a speciffic direction.
+	/// </summary>
+	/// <param name="newRotation">New rotation.</param>
+	public void Rotate(Quaternion newRotation)
+	{
+		//Quaternion oldRot = transform.rotation;
+		transform.rotation = Quaternion.Lerp(transform.rotation, newRotation, Time.deltaTime * PlayerSettings.singleton.rotationSpeed);
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Projectile")
+		{
+			if (true)//!other.collider.IsTouching(shield.GetComponent<Collider2D>()))
+			{
+				ShieldImpact();
+				//other.gameObject.GetComponent<Projectile>().hasInteracted = true;
+				Destroy(other.gameObject);
+			}
+		}
 	}
 }
