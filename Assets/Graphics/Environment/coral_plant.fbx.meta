@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 18754f9bde2b11646b205c698524c8b2
+timeCreated: 1432486431
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature|Armature|Dupli|1
+    100004: Armature|Armature|Dupli|10
+    100006: Armature|Armature|Dupli|100
+    100008: Armature|Armature|Dupli|11
+    100010: Armature|Armature|Dupli|12
+    100012: Armature|Armature|Dupli|13
+    100014: Armature|Armature|Dupli|14
+    100016: Armature|Armature|Dupli|15
+    100018: Armature|Armature|Dupli|16
+    100020: Armature|Armature|Dupli|17
+    100022: Armature|Armature|Dupli|18
+    100024: Armature|Armature|Dupli|19
+    100026: Armature|Armature|Dupli|2
+    100028: Armature|Armature|Dupli|20
+    100030: Armature|Armature|Dupli|21
+    100032: Armature|Armature|Dupli|22
+    100034: Armature|Armature|Dupli|23
+    100036: Armature|Armature|Dupli|24
+    100038: Armature|Armature|Dupli|25
+    100040: Armature|Armature|Dupli|26
+    100042: Armature|Armature|Dupli|27
+    100044: Armature|Armature|Dupli|28
+    100046: Armature|Armature|Dupli|29
+    100048: Armature|Armature|Dupli|3
+    100050: Armature|Armature|Dupli|30
+    100052: Armature|Armature|Dupli|31
+    100054: Armature|Armature|Dupli|32
+    100056: Armature|Armature|Dupli|33
+    100058: Armature|Armature|Dupli|34
+    100060: Armature|Armature|Dupli|35
+    100062: Armature|Armature|Dupli|36
+    100064: Armature|Armature|Dupli|37
+    100066: Armature|Armature|Dupli|38
+    100068: Armature|Armature|Dupli|39
+    100070: Armature|Armature|Dupli|4
+    100072: Armature|Armature|Dupli|40
+    100074: Armature|Armature|Dupli|41
+    100076: Armature|Armature|Dupli|42
+    100078: Armature|Armature|Dupli|43
+    100080: Armature|Armature|Dupli|44
+    100082: Armature|Armature|Dupli|45
+    100084: Armature|Armature|Dupli|46
+    100086: Armature|Armature|Dupli|47
+    100088: Armature|Armature|Dupli|48
+    100090: Armature|Armature|Dupli|49
+    100092: Armature|Armature|Dupli|5
+    100094: Armature|Armature|Dupli|50
+    100096: Armature|Armature|Dupli|51
+    100098: Armature|Armature|Dupli|52
+    100100: Armature|Armature|Dupli|53
+    100102: Armature|Armature|Dupli|54
+    100104: Armature|Armature|Dupli|55
+    100106: Armature|Armature|Dupli|56
+    100108: Armature|Armature|Dupli|57
+    100110: Armature|Armature|Dupli|58
+    100112: Armature|Armature|Dupli|59
+    100114: Armature|Armature|Dupli|6
+    100116: Armature|Armature|Dupli|60
+    100118: Armature|Armature|Dupli|61
+    100120: Armature|Armature|Dupli|62
+    100122: Armature|Armature|Dupli|63
+    100124: Armature|Armature|Dupli|64
+    100126: Armature|Armature|Dupli|65
+    100128: Armature|Armature|Dupli|66
+    100130: Armature|Armature|Dupli|67
+    100132: Armature|Armature|Dupli|68
+    100134: Armature|Armature|Dupli|69
+    100136: Armature|Armature|Dupli|7
+    100138: Armature|Armature|Dupli|70
+    100140: Armature|Armature|Dupli|71
+    100142: Armature|Armature|Dupli|72
+    100144: Armature|Armature|Dupli|73
+    100146: Armature|Armature|Dupli|74
+    100148: Armature|Armature|Dupli|75
+    100150: Armature|Armature|Dupli|76
+    100152: Armature|Armature|Dupli|77
+    100154: Armature|Armature|Dupli|78
+    100156: Armature|Armature|Dupli|79
+    100158: Armature|Armature|Dupli|8
+    100160: Armature|Armature|Dupli|80
+    100162: Armature|Armature|Dupli|81
+    100164: Armature|Armature|Dupli|82
+    100166: Armature|Armature|Dupli|83
+    100168: Armature|Armature|Dupli|84
+    100170: Armature|Armature|Dupli|85
+    100172: Armature|Armature|Dupli|86
+    100174: Armature|Armature|Dupli|87
+    100176: Armature|Armature|Dupli|88
+    100178: Armature|Armature|Dupli|89
+    100180: Armature|Armature|Dupli|9
+    100182: Armature|Armature|Dupli|90
+    100184: Armature|Armature|Dupli|91
+    100186: Armature|Armature|Dupli|92
+    100188: Armature|Armature|Dupli|93
+    100190: Armature|Armature|Dupli|94
+    100192: Armature|Armature|Dupli|95
+    100194: Armature|Armature|Dupli|96
+    100196: Armature|Armature|Dupli|97
+    100198: Armature|Armature|Dupli|98
+    100200: Armature|Armature|Dupli|99
+    100202: Armature|Base
+    100204: Armature|Bone.001
+    100206: Armature|Bone.002
+    100208: Armature|Bone.003
+    100210: Armature|Bone.004
+    100212: Armature|Bone.005
+    100214: Armature|Bone.006
+    100216: Armature|Bone.007
+    100218: Armature|Bone.008
+    100220: Armature|Bone.009
+    100222: Armature|Bone.010
+    100224: Armature|Bone.011
+    100226: Armature|Bone.012
+    100228: Armature|Bone.013
+    100230: Armature|Bone.014
+    100232: Camera
+    100234: //RootNode
+    100236: Cube
+    100238: Lamp
+    400000: Armature
+    400002: Armature|Armature|Dupli|1
+    400004: Armature|Armature|Dupli|10
+    400006: Armature|Armature|Dupli|100
+    400008: Armature|Armature|Dupli|11
+    400010: Armature|Armature|Dupli|12
+    400012: Armature|Armature|Dupli|13
+    400014: Armature|Armature|Dupli|14
+    400016: Armature|Armature|Dupli|15
+    400018: Armature|Armature|Dupli|16
+    400020: Armature|Armature|Dupli|17
+    400022: Armature|Armature|Dupli|18
+    400024: Armature|Armature|Dupli|19
+    400026: Armature|Armature|Dupli|2
+    400028: Armature|Armature|Dupli|20
+    400030: Armature|Armature|Dupli|21
+    400032: Armature|Armature|Dupli|22
+    400034: Armature|Armature|Dupli|23
+    400036: Armature|Armature|Dupli|24
+    400038: Armature|Armature|Dupli|25
+    400040: Armature|Armature|Dupli|26
+    400042: Armature|Armature|Dupli|27
+    400044: Armature|Armature|Dupli|28
+    400046: Armature|Armature|Dupli|29
+    400048: Armature|Armature|Dupli|3
+    400050: Armature|Armature|Dupli|30
+    400052: Armature|Armature|Dupli|31
+    400054: Armature|Armature|Dupli|32
+    400056: Armature|Armature|Dupli|33
+    400058: Armature|Armature|Dupli|34
+    400060: Armature|Armature|Dupli|35
+    400062: Armature|Armature|Dupli|36
+    400064: Armature|Armature|Dupli|37
+    400066: Armature|Armature|Dupli|38
+    400068: Armature|Armature|Dupli|39
+    400070: Armature|Armature|Dupli|4
+    400072: Armature|Armature|Dupli|40
+    400074: Armature|Armature|Dupli|41
+    400076: Armature|Armature|Dupli|42
+    400078: Armature|Armature|Dupli|43
+    400080: Armature|Armature|Dupli|44
+    400082: Armature|Armature|Dupli|45
+    400084: Armature|Armature|Dupli|46
+    400086: Armature|Armature|Dupli|47
+    400088: Armature|Armature|Dupli|48
+    400090: Armature|Armature|Dupli|49
+    400092: Armature|Armature|Dupli|5
+    400094: Armature|Armature|Dupli|50
+    400096: Armature|Armature|Dupli|51
+    400098: Armature|Armature|Dupli|52
+    400100: Armature|Armature|Dupli|53
+    400102: Armature|Armature|Dupli|54
+    400104: Armature|Armature|Dupli|55
+    400106: Armature|Armature|Dupli|56
+    400108: Armature|Armature|Dupli|57
+    400110: Armature|Armature|Dupli|58
+    400112: Armature|Armature|Dupli|59
+    400114: Armature|Armature|Dupli|6
+    400116: Armature|Armature|Dupli|60
+    400118: Armature|Armature|Dupli|61
+    400120: Armature|Armature|Dupli|62
+    400122: Armature|Armature|Dupli|63
+    400124: Armature|Armature|Dupli|64
+    400126: Armature|Armature|Dupli|65
+    400128: Armature|Armature|Dupli|66
+    400130: Armature|Armature|Dupli|67
+    400132: Armature|Armature|Dupli|68
+    400134: Armature|Armature|Dupli|69
+    400136: Armature|Armature|Dupli|7
+    400138: Armature|Armature|Dupli|70
+    400140: Armature|Armature|Dupli|71
+    400142: Armature|Armature|Dupli|72
+    400144: Armature|Armature|Dupli|73
+    400146: Armature|Armature|Dupli|74
+    400148: Armature|Armature|Dupli|75
+    400150: Armature|Armature|Dupli|76
+    400152: Armature|Armature|Dupli|77
+    400154: Armature|Armature|Dupli|78
+    400156: Armature|Armature|Dupli|79
+    400158: Armature|Armature|Dupli|8
+    400160: Armature|Armature|Dupli|80
+    400162: Armature|Armature|Dupli|81
+    400164: Armature|Armature|Dupli|82
+    400166: Armature|Armature|Dupli|83
+    400168: Armature|Armature|Dupli|84
+    400170: Armature|Armature|Dupli|85
+    400172: Armature|Armature|Dupli|86
+    400174: Armature|Armature|Dupli|87
+    400176: Armature|Armature|Dupli|88
+    400178: Armature|Armature|Dupli|89
+    400180: Armature|Armature|Dupli|9
+    400182: Armature|Armature|Dupli|90
+    400184: Armature|Armature|Dupli|91
+    400186: Armature|Armature|Dupli|92
+    400188: Armature|Armature|Dupli|93
+    400190: Armature|Armature|Dupli|94
+    400192: Armature|Armature|Dupli|95
+    400194: Armature|Armature|Dupli|96
+    400196: Armature|Armature|Dupli|97
+    400198: Armature|Armature|Dupli|98
+    400200: Armature|Armature|Dupli|99
+    400202: Armature|Base
+    400204: Armature|Bone.001
+    400206: Armature|Bone.002
+    400208: Armature|Bone.003
+    400210: Armature|Bone.004
+    400212: Armature|Bone.005
+    400214: Armature|Bone.006
+    400216: Armature|Bone.007
+    400218: Armature|Bone.008
+    400220: Armature|Bone.009
+    400222: Armature|Bone.010
+    400224: Armature|Bone.011
+    400226: Armature|Bone.012
+    400228: Armature|Bone.013
+    400230: Armature|Bone.014
+    400232: Camera
+    400234: //RootNode
+    400236: Cube
+    400238: Lamp
+    4300000: Cube
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 240
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|1
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|2
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|3
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|4
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|5
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|6
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|7
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|8
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|9
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|10
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|11
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|12
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|13
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|14
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|15
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|16
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|17
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|18
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|19
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|20
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|21
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|22
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|23
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|24
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|25
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|26
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|27
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|28
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|29
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|30
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|31
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|32
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|33
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|34
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|35
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|36
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|37
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|38
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|39
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|40
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|41
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|42
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|43
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|44
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|45
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|46
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|47
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|48
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|49
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|50
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|51
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|52
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|53
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|54
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|55
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|56
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|57
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|58
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|59
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|60
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|61
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|62
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|63
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|64
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|65
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|66
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|67
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|68
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|69
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|70
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|71
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|72
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|73
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|74
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|75
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|76
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|77
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|78
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|79
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|80
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|81
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|82
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|83
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|84
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|85
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|86
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|87
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|88
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|89
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|90
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|91
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|92
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|93
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|94
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|95
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|96
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|97
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|98
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|99
+        weight: 1
+      - path: Armature/Armature|Armature|Dupli|100
+        weight: 1
+      - path: Armature/Armature|Base
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.001
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.001/Armature|Bone.002
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.001/Armature|Bone.003
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.001/Armature|Bone.003/Armature|Bone.004
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.005
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.005/Armature|Bone.006
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.005/Armature|Bone.006/Armature|Bone.007
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.005/Armature|Bone.006/Armature|Bone.009
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.008
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.008/Armature|Bone.010
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.008/Armature|Bone.011
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.012
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.012/Armature|Bone.013
+        weight: 1
+      - path: Armature/Armature|Base/Armature|Bone.012/Armature|Bone.013/Armature|Bone.014
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
