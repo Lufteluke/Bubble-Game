@@ -150,7 +150,805 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Boost_Anim
+      takeName: Boost_Anim
+      firstFrame: 13
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Default_NoAnim_
+      takeName: Default_NoAnim_
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Die_Anim
+      takeName: Die_Anim
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_Anim
+      takeName: Idle_Anim
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Shoot_Anim
+      takeName: Shoot_Anim
+      firstFrame: 9.10000038
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Spawn_Anim
+      takeName: Spawn_Anim
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Back_Model
+        weight: 1
+      - path: Ctrl_Shape
+        weight: 1
+      - path: Ctrl_Shape_001
+        weight: 1
+      - path: Ctrl_Shape_002
+        weight: 1
+      - path: Ctrl_Shape_003
+        weight: 1
+      - path: Ctrl_Shape_004
+        weight: 1
+      - path: Ctrl_Shape_005
+        weight: 1
+      - path: Eye_L_Model
+        weight: 1
+      - path: Eye_L_Model_001
+        weight: 1
+      - path: Eye_R_Model
+        weight: 1
+      - path: Eye_R_Model_001
+        weight: 1
+      - path: FATASS
+        weight: 1
+      - path: FATASS/Main_Body_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_Eye_Bone/L_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/L_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Back1/LFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Front1/LFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/LFoot_Middle1/LFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Mouth_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_Eye_Bone/R_Eye_Pupil_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/R_eye_shine_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Back1/RFoot_Back2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Front1/RFoot_Front2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/RFoot_Middle1/RFoot_Middle2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_1
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_2
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_3
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_4
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_5
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_6
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_7
+        weight: 1
+      - path: FATASS/Main_Body_Bone/Skjold_Main_Bone/Boost_Bone_8
+        weight: 1
+      - path: Foot_Ctrl_Shape
+        weight: 1
+      - path: Main_Model
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

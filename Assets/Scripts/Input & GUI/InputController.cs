@@ -42,7 +42,8 @@ public class InputController : MonoBehaviour
 
 	public KeyCode selectButton = KeyCode.Return;
 	public KeyCode backButton = KeyCode.Escape;
-	public bool reverseControls = false;
+	private bool reverseControls = false; //buggy
+	public bool leftRightControls = true;
 
 	private Fighter p2;
 	public KeyCode p2UpKey = KeyCode.UpArrow;
@@ -56,8 +57,8 @@ public class InputController : MonoBehaviour
 	private Quaternion p1Rotation = Quaternion.Euler (0, 0, 0);
 	private Quaternion p2Rotation = Quaternion.Euler (0, 0, 0);
 
-	private bool inputP1 = true;
-	private bool inputP2 = true;
+	//private bool inputP1 = true;
+	//private bool inputP2 = true;
 
 
 	public bool PrepareData()
@@ -66,14 +67,14 @@ public class InputController : MonoBehaviour
 		p2 = MCP.singleton.GetPlayerTwo ();
 		return true;
 	}
-	
+
 	void Update ()
 	{
-		p1Rotation = GetRotationByKeys (p1UpKey, p1DownKey, p1LeftKey, p1RightKey);
+		if (!leftRightControls)	p1Rotation = GetRotationByKeys (p1UpKey, p1DownKey, p1LeftKey, p1RightKey);
 		bool noInput1 = noInput;
-		p2Rotation = GetRotationByKeys (p2UpKey, p2DownKey, p2LeftKey, p2RightKey);
+		if (!leftRightControls) p2Rotation = GetRotationByKeys (p2UpKey, p2DownKey, p2LeftKey, p2RightKey);
 
-		if (reverseControls)
+		if (reverseControls)///buggy
 		{
 			p1Rotation = Quaternion.Inverse(p1Rotation);
 			p2Rotation = Quaternion.Inverse(p2Rotation);
@@ -81,13 +82,26 @@ public class InputController : MonoBehaviour
 
 		if (!p1.IsLocked ())
 		{
-			if (!noInput1) p1.Rotate(p1Rotation);
+			if (leftRightControls)
+			{
+				if (Input.GetKey(p1RightKey) && !Input.GetKey(p1LeftKey)) p1.RotateRight();
+				else if (Input.GetKey(p1LeftKey)) p1.RotateLeft();
+			}
+			else if (!noInput1) p1.Rotate(p1Rotation);
+
 			if (Input.GetKeyDown(p1FireKey)) p1.Fire();
 			if (Input.GetKeyDown (p1BoostKey)) p1.Boost ();
 		}
 		if (!p2.IsLocked ())
 		{
-			if (!noInput) p2.Rotate(p2Rotation);
+			if (leftRightControls)
+			{
+				if (Input.GetKey(p2RightKey) && !Input.GetKey(p2LeftKey)) p2.RotateRight();
+				else if (Input.GetKey(p2LeftKey)) p2.RotateLeft();
+			}
+
+			else if (!noInput) p2.Rotate(p2Rotation);
+
 			if (Input.GetKeyDown(p2FireKey)) p2.Fire();
 			if (Input.GetKeyDown(p2BoostKey)) p2.Boost();
 		}

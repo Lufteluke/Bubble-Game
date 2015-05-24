@@ -38,6 +38,7 @@ public class MCP : MonoBehaviour {
 	private Fighter playerOne;
 	private Fighter playerTwo;
 	private GUIController guCon;
+	private bool respawning = false;
 
 	void Start()
 	{
@@ -59,6 +60,7 @@ public class MCP : MonoBehaviour {
 	{
 		GetGuCon().StartGame ();
 		AudioController.singleton.PlayMainTrack ();
+		foreach (GameObject o in GameObject.FindGameObjectsWithTag("Projectile")) Destroy(o);
 		GetPlayerOne ().StartGame ();
 		GetPlayerTwo ().StartGame ();
 	}
@@ -86,7 +88,7 @@ public class MCP : MonoBehaviour {
 		{
 			if (player.RemoveLifeAndReportSurvival())
 			{
-				StartCoroutine(RespawnWithDelay());
+				if (!respawning) StartCoroutine(RespawnWithDelay());
 			}
 			else
 			{
@@ -107,11 +109,14 @@ public class MCP : MonoBehaviour {
 	/// <returns>The with delay.</returns>
 	IEnumerator RespawnWithDelay()
 	{
+		respawning = true;
 		GetGuCon().UpdateHUD ();
 		yield return new WaitForSeconds(PlayerSettings.singleton.respawnDelay);
-		foreach (GameObject o in GameObject.FindGameObjectsWithTag("Projectile")) Destroy(o);
 		GetPlayerOne ().Respawn ();
 		GetPlayerTwo ().Respawn ();
+		foreach (GameObject o in GameObject.FindGameObjectsWithTag("Projectile")) Destroy(o);
+		respawning = false;
+
 	}
 
 
