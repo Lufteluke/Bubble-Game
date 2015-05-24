@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 613076b06b5f7a047839344405cc1cb4
+timeCreated: 1432435661
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Back_Model
+    100002: Boost_Bone_1
+    100004: Boost_Bone_2
+    100006: Boost_Bone_3
+    100008: Boost_Bone_4
+    100010: Boost_Bone_5
+    100012: Boost_Bone_6
+    100014: Boost_Bone_7
+    100016: Boost_Bone_8
+    100018: Ctrl_Shape
+    100020: Ctrl_Shape_001
+    100022: Ctrl_Shape_002
+    100024: Ctrl_Shape_003
+    100026: Ctrl_Shape_004
+    100028: Ctrl_Shape_005
+    100030: Eye_L_Model
+    100032: Eye_L_Model_001
+    100034: Eye_R_Model
+    100036: Eye_R_Model_001
+    100038: FATASS
+    100040: //RootNode
+    100042: Foot_Ctrl_Shape
+    100044: L_Eye_Bone
+    100046: L_Eye_Pupil_Bone
+    100048: L_eye_shine_Bone
+    100050: LFoot_Back1
+    100052: LFoot_Back2
+    100054: LFoot_Front1
+    100056: LFoot_Front2
+    100058: LFoot_Middle1
+    100060: LFoot_Middle2
+    100062: Main_Body_Bone
+    100064: Main_Model
+    100066: Mouth_Bone
+    100068: R_Eye_Bone
+    100070: R_Eye_Pupil_Bone
+    100072: R_eye_shine_Bone
+    100074: RFoot_Back1
+    100076: RFoot_Back2
+    100078: RFoot_Front1
+    100080: RFoot_Front2
+    100082: RFoot_Middle1
+    100084: RFoot_Middle2
+    100086: Skjold_Main_Bone
+    400000: Back_Model
+    400002: Boost_Bone_1
+    400004: Boost_Bone_2
+    400006: Boost_Bone_3
+    400008: Boost_Bone_4
+    400010: Boost_Bone_5
+    400012: Boost_Bone_6
+    400014: Boost_Bone_7
+    400016: Boost_Bone_8
+    400018: Ctrl_Shape
+    400020: Ctrl_Shape_001
+    400022: Ctrl_Shape_002
+    400024: Ctrl_Shape_003
+    400026: Ctrl_Shape_004
+    400028: Ctrl_Shape_005
+    400030: Eye_L_Model
+    400032: Eye_L_Model_001
+    400034: Eye_R_Model
+    400036: Eye_R_Model_001
+    400038: FATASS
+    400040: //RootNode
+    400042: Foot_Ctrl_Shape
+    400044: L_Eye_Bone
+    400046: L_Eye_Pupil_Bone
+    400048: L_eye_shine_Bone
+    400050: LFoot_Back1
+    400052: LFoot_Back2
+    400054: LFoot_Front1
+    400056: LFoot_Front2
+    400058: LFoot_Middle1
+    400060: LFoot_Middle2
+    400062: Main_Body_Bone
+    400064: Main_Model
+    400066: Mouth_Bone
+    400068: R_Eye_Bone
+    400070: R_Eye_Pupil_Bone
+    400072: R_eye_shine_Bone
+    400074: RFoot_Back1
+    400076: RFoot_Back2
+    400078: RFoot_Front1
+    400080: RFoot_Front2
+    400082: RFoot_Middle1
+    400084: RFoot_Middle2
+    400086: Skjold_Main_Bone
+    2300000: Ctrl_Shape
+    2300002: Ctrl_Shape_001
+    2300004: Ctrl_Shape_002
+    2300006: Ctrl_Shape_003
+    2300008: Ctrl_Shape_004
+    2300010: Ctrl_Shape_005
+    2300012: Foot_Ctrl_Shape
+    3300000: Ctrl_Shape
+    3300002: Ctrl_Shape_001
+    3300004: Ctrl_Shape_002
+    3300006: Ctrl_Shape_003
+    3300008: Ctrl_Shape_004
+    3300010: Ctrl_Shape_005
+    3300012: Foot_Ctrl_Shape
+    4300000: Main_Model
+    4300002: Eye_R_Model_001
+    4300004: Eye_L_Model_001
+    4300006: Eye_L_Model
+    4300008: Eye_R_Model
+    4300010: Back_Model
+    4300012: Ctrl_Shape_005
+    4300014: Ctrl_Shape_004
+    4300016: Ctrl_Shape_003
+    4300018: Foot_Ctrl_Shape
+    4300020: Ctrl_Shape_002
+    4300022: Ctrl_Shape_001
+    4300024: Ctrl_Shape
+    7400000: Default Take
+    7400002: Boost_Anim
+    7400004: Default_NoAnim_
+    7400006: Die_Anim
+    7400008: Idle_Anim
+    7400010: Shoot_Anim
+    7400012: Spawn_Anim
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Back_Model
+    13700002: Eye_L_Model
+    13700004: Eye_L_Model_001
+    13700006: Eye_R_Model
+    13700008: Eye_R_Model_001
+    13700010: Main_Model
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
