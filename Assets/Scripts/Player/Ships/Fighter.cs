@@ -33,6 +33,7 @@ public class Fighter : MonoBehaviour
 	private PlayerSettings pS;
 	private ParticleSystem partSys;
 	private bool inputLocked = false;
+	private bool boostAvalible = true;
 
 	private int score = 0;
 
@@ -106,7 +107,7 @@ public class Fighter : MonoBehaviour
 	{
 		if (ammo < 1) 
 		{
-			Debug.Log("\'Click\' " + gameObject.name);
+			//Debug.Log("\'Click\' " + gameObject.name);
 			return false;
 		}
 		ammo--;
@@ -125,14 +126,14 @@ public class Fighter : MonoBehaviour
 		if (shields < 1)
 		{
 			Kill ();
-			Debug.Log("Out of shields on " + gameObject.name);
+//			Debug.Log("Out of shields on " + gameObject.name);
 			GUIController.singleton.UpdateHUD ();
 			return false;
 		}
 		else
 		{
 			shields--;
-			Debug.Log ("Deploys shield on " + gameObject.name);
+			//Debug.Log ("Deploys shield on " + gameObject.name);
 			GUIController.singleton.UpdateHUD ();
 			return true;
 		}
@@ -143,21 +144,32 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public bool Boost()
 	{
+		if (!boostAvalible) return false;
 		if (!pS.unlimitedBoosts)
 		{
 			if (boosts < 1)
 			{
-				Debug.Log("phfl, no boost " + gameObject.name);
+				//Debug.Log("phfl, no boost " + gameObject.name);
 				return false;
 			}
 		}
 		rBody.AddRelativeForce(new Vector2(pS.movementSpeed,0));
-
 		boosts--;
 		PlayAnimationOneShot (boostAnimation);
-		Debug.Log ("Deploys boost on " + gameObject.name);
+		//Debug.Log ("Deploys boost on " + gameObject.name);
 		GUIController.singleton.UpdateHUD ();
+		boostAvalible = false;
+		StartCoroutine (ReEnableBoost ());
+
 		return true;
+	}
+
+	IEnumerator ReEnableBoost()
+	{
+
+		yield return new WaitForSeconds (pS.boostRegenInSec);
+
+		boostAvalible = true;
 	}
 
 	public void AbsorbAmmo()
@@ -212,7 +224,7 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Loss()
 	{
-		Debug.Log ("Boohoo! " + gameObject.name + " loses");
+		//Debug.Log ("Boohoo! " + gameObject.name + " loses");
 	//	score--;
 	}
 
@@ -221,7 +233,7 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Victory()
 	{
-		Debug.Log ("Yay! " + gameObject.name + " wins!");
+		//Debug.Log ("Yay! " + gameObject.name + " wins!");
 		score++;
 	}
 
@@ -309,7 +321,7 @@ public class Fighter : MonoBehaviour
 		{
 			if (!other.gameObject.GetComponent<Projectile>().hasInteracted)
 			{
-				Debug.LogError("whap");
+//				Debug.LogError("whap");
 				ShieldImpact();
 				other.gameObject.GetComponent<Projectile>().hasInteracted = true;
 				Destroy(other.gameObject);

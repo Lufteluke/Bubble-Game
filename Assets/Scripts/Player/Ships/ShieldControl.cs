@@ -17,7 +17,7 @@ public class ShieldControl : MonoBehaviour
 		{
 			if (!other.gameObject.GetComponent<Projectile>().hasInteracted)
 			{
-				Debug.LogError("whap2");
+				// Debug.LogError("whap2");
 				GetComponentInParent<Fighter>().AbsorbAmmo();
 				other.gameObject.GetComponent<Projectile>().hasInteracted = true;
 				Destroy (other.gameObject);

@@ -10,7 +10,7 @@ public class FireControl : MonoBehaviour
 		Rigidbody2D bullet = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
 		bullet.AddRelativeForce(new Vector2 (-PlayerSettings.singleton.bulletSpeed, 0));
 		AudioController.singleton.PlayCannonSFX ();
-		bullet.GetComponent<Projectile>().SetOwner (GetComponentInParent<Fighter>());
+		bullet.GetComponentInChildren<Projectile>().SetOwner (GetComponentInParent<Fighter>());
 		//Debug.LogError ((bullet.transform.forward * PlayerSettings.singleton.bulletSpeed).ToString ());
 	}
 }
