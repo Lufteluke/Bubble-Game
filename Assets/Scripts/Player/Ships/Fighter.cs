@@ -16,6 +16,7 @@ public class Fighter : MonoBehaviour
 	private FireControl cannon;
 	private ShieldControl shield;
 	private Fighter otherPlayer;
+	private AudioController auCon;
 
 	private Vector3 startingPosition;
 	private Quaternion startingRotaion;
@@ -34,6 +35,7 @@ public class Fighter : MonoBehaviour
 	public bool PrepareData()
 	{
 		pS = PlayerSettings.singleton;
+		auCon = AudioController.singleton;
 		cannon = GetComponentInChildren<FireControl>();
 		shield = GetComponentInChildren<ShieldControl>();
 		rBody = GetComponent<Rigidbody2D> ();
@@ -41,10 +43,6 @@ public class Fighter : MonoBehaviour
 
 		partSys.enableEmission = false;
 
-		ammo = pS.ammoOnStart;
-		boosts = pS.boostsOnStart;
-		shields = pS.shieldsOnStart;
-		lives = pS.lives;
 		rBody.mass = pS.rigidbodyMass;
 		rBody.angularDrag = pS.rigidbodyAngularDrag;
 		rBody.drag = pS.rigidbodyLinearDrag;
@@ -62,6 +60,7 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void StartGame()
 	{
+		lives = pS.lives;
 		Respawn ();
 	}
 
@@ -151,6 +150,7 @@ public class Fighter : MonoBehaviour
 	public void AbsorbAmmo()
 	{
 		ammo++;
+		auCon.PlayShieldImpactSFX();
 		GUIController.singleton.UpdateHUD ();
 	}
 
@@ -169,6 +169,7 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Kill ()
 	{
+		auCon.PlayShipExplosionSFX ();
 		LockInput (true);
 		MCP.singleton.KillPlayer (this);
 		rBody.gravityScale = 0.2f;
@@ -181,7 +182,10 @@ public class Fighter : MonoBehaviour
 	/// <returns><c>true</c>, if survived, <c>false</c> otherwise.</returns>
 	public bool RemoveLifeAndReportSurvival ()
 	{
+		if (IsDead()) return true;
+		auCon.PlayGoingDownSFX ();
 		lives--;
+		dead = true;
 		GUIController.singleton.UpdateHUD ();
 		return (lives > 0);
 	}
@@ -192,6 +196,7 @@ public class Fighter : MonoBehaviour
 	public void Loss()
 	{
 		Debug.Log ("Boohoo! " + gameObject.name + " loses");
+	//	score--;
 	}
 
 	/// <summary>
@@ -208,6 +213,7 @@ public class Fighter : MonoBehaviour
 	/// </summary>
 	public void Respawn()
 	{
+		if (lives < 1) return;
 		LockInput (false);
 		dead = false;
 		partSys.enableEmission = false;
@@ -241,6 +247,11 @@ public class Fighter : MonoBehaviour
 	public int GetAmmo ()
 	{
 		return ammo;
+	}
+
+	public int GetLives()
+	{
+		return lives;
 	}
 
 	public int GetShields()

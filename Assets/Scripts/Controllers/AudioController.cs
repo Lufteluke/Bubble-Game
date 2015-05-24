@@ -32,10 +32,14 @@ public class AudioController : MonoBehaviour {
 	//__________________________________________________________________________________________________
 
 	public AudioClip mainTrack;
+	public AudioClip menuTrack;
 	public AudioClip cannon;
 	public AudioClip cannonImpact;
-	public AudioClip shipExplision;
+	public AudioClip shipExplosion;
 	public AudioClip shieldImpact;
+	public AudioClip fanfare;
+	public AudioClip goingDown;
+	public float time = 0;
 
 	private AudioSource src;
 
@@ -45,13 +49,20 @@ public class AudioController : MonoBehaviour {
 		return true;
 	}
 
-
-	/// <summary>
-	/// Plays the main track.
-	/// </summary>
-	public void PlayMainTrack ()
+	private void PlayTrack (AudioClip clip)
 	{
+		if (src.clip == clip) return;
+		if (src.clip == mainTrack) time = src.time;
+		src.clip = clip;
+		src.Play ();
+		if (clip == mainTrack) src.time = time;
+		else src.time = 0f;
+	}
+	
 
+	private void PlaySFX(AudioClip clip)
+	{
+		src.PlayOneShot (clip);
 	}
 
 	/// <summary>
@@ -59,7 +70,21 @@ public class AudioController : MonoBehaviour {
 	/// </summary>
 	public void PlayCannonSFX()
 	{
+		PlaySFX (cannon);
+	}
 
+	
+	/// <summary>
+	/// Plays the main track.
+	/// </summary>
+	public void PlayMainTrack ()
+	{
+		 PlayTrack (mainTrack);
+	}
+	
+	public void PlayMenuTrack ()
+	{
+		PlayTrack (menuTrack);
 	}
 
 	/// <summary>
@@ -67,7 +92,7 @@ public class AudioController : MonoBehaviour {
 	/// </summary>
 	public void PlayCannonImpactSFX()
 	{
-
+		PlaySFX (cannonImpact);
 	}
 
 	/// <summary>
@@ -75,7 +100,7 @@ public class AudioController : MonoBehaviour {
 	/// </summary>
 	public void PlayShipExplosionSFX()
 	{
-
+		PlaySFX (shipExplosion);
 	}
 
 	/// <summary>
@@ -83,6 +108,16 @@ public class AudioController : MonoBehaviour {
 	/// </summary>
 	public void PlayShieldImpactSFX()
 	{
+		PlaySFX (shieldImpact);
+	}
 
+	public void PlayGoingDownSFX()
+	{
+		PlaySFX (goingDown);
+	}
+
+	public void PlayFanfare()
+	{
+		PlayTrack (fanfare);
 	}
 }
