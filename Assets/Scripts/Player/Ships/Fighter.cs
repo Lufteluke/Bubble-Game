@@ -111,7 +111,7 @@ public class Fighter : MonoBehaviour
 		}
 		ammo--;
 		cannon.Fire ();
-		anim.CrossFadeQueued (shootAnimation, 0.3f, QueueMode.PlayNow);
+		PlayAnimationOneShot (shootAnimation);
 		//Debug.Log ("Fires cannon on " + gameObject.name);
 		GUIController.singleton.UpdateHUD ();
 		return true;
@@ -154,7 +154,7 @@ public class Fighter : MonoBehaviour
 		rBody.AddRelativeForce(new Vector2(pS.movementSpeed,0));
 
 		boosts--;
-		anim.CrossFadeQueued (boostAnimation, 0.3f, QueueMode.PlayNow);
+		PlayAnimationOneShot (boostAnimation);
 		Debug.Log ("Deploys boost on " + gameObject.name);
 		GUIController.singleton.UpdateHUD ();
 		return true;
@@ -184,7 +184,11 @@ public class Fighter : MonoBehaviour
 	{
 		auCon.PlayShipExplosionSFX ();
 		LockInput (true);
-		if (!dead) anim.Play (dieAnimation);
+		if (!dead)
+		{
+			anim.CrossFadeQueued (dieAnimation, 0.3f, QueueMode.PlayNow);
+			auCon.PlayGoingDownSFX ();
+		}
 		MCP.singleton.KillPlayer (this);
 		rBody.gravityScale = 0.2f;
 		dead = true;
@@ -198,7 +202,6 @@ public class Fighter : MonoBehaviour
 	public bool RemoveLifeAndReportSurvival ()
 	{
 		if (IsDead()) return true;
-		auCon.PlayGoingDownSFX ();
 		lives--;
 		GUIController.singleton.UpdateHUD ();
 		return (lives > 0);
@@ -222,14 +225,19 @@ public class Fighter : MonoBehaviour
 		score++;
 	}
 
+	private void PlayAnimationOneShot(string animation)
+	{
+		anim.CrossFadeQueued (animation, 0.3f, QueueMode.PlayNow);
+		anim.CrossFadeQueued (idleAnimation, 0.3f, QueueMode.CompleteOthers);
+	}
+
 	/// <summary>
 	/// Respawn this instance.
 	/// </summary>
 	public void Respawn()
 	{
 		if (lives < 1) return;
-		anim.Play (respawnAnimation);
-		anim.PlayQueued (idleAnimation);
+		PlayAnimationOneShot (respawnAnimation);
 		LockInput (false);
 		dead = false;
 		partSys.enableEmission = false;
@@ -238,7 +246,7 @@ public class Fighter : MonoBehaviour
 		shields = pS.shieldsOnStart;
 		ammo = pS.ammoOnStart;
 		rBody.velocity = new Vector3 (0, 0, 0);
-		rBody.rotation = 0;
+		rBody.angularVelocity = 0;
 		transform.position = startingPosition;
 		transform.rotation = startingRotaion;
 		GUIController.singleton.UpdateHUD ();
@@ -299,10 +307,11 @@ public class Fighter : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Projectile")
 		{
-			if (true)//!other.collider.IsTouching(shield.GetComponent<Collider2D>()))
+			if (!other.gameObject.GetComponent<Projectile>().hasInteracted)
 			{
+				Debug.LogError("whap");
 				ShieldImpact();
-				//other.gameObject.GetComponent<Projectile>().hasInteracted = true;
+				other.gameObject.GetComponent<Projectile>().hasInteracted = true;
 				Destroy(other.gameObject);
 			}
 		}

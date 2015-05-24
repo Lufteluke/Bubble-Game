@@ -47,14 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Controllers\AudioController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\GUIController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MCP.cs" />
-     <Compile Include="Assets\Scripts\GUIController.cs" />
      <Compile Include="Assets\Scripts\Input &amp; GUI\InputController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerSettings.cs" />
      <Compile Include="Assets\Scripts\Player\Ships\Fighter.cs" />
      <Compile Include="Assets\Scripts\Player\Ships\FireControl.cs" />
      <Compile Include="Assets\Scripts\Player\Ships\ShieldControl.cs" />
-     <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\World\DangerousObject.cs" />
+     <Compile Include="Assets\Scripts\World\Projectile.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

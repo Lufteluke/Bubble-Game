@@ -68,6 +68,7 @@ public class MCP : MonoBehaviour {
 	public void GameOver()
 	{
 		GetGuCon ().GameOver ();
+		InputController.singleton.EnableRestart ();
 		AudioController.singleton.PlayFanfare ();
 	}
 
@@ -75,6 +76,7 @@ public class MCP : MonoBehaviour {
 	{
 		GUIController.singleton.MainMenu ();
 		AudioController.singleton.PlayMenuTrack ();
+		InputController.singleton.EnableRestart ();
 	}
 
 	/// <summary>

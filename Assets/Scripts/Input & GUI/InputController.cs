@@ -41,7 +41,7 @@ public class InputController : MonoBehaviour
 	public KeyCode p1BoostKey = KeyCode.E;
 
 	public KeyCode selectButton = KeyCode.Return;
-	public KeyCode backButton = KeyCode.Escape;
+	//public KeyCode backButton = KeyCode.Escape;
 	private bool reverseControls = false; //buggy
 	public bool leftRightControls = true;
 
@@ -56,6 +56,7 @@ public class InputController : MonoBehaviour
 	private bool noInput = false;
 	private Quaternion p1Rotation = Quaternion.Euler (0, 0, 0);
 	private Quaternion p2Rotation = Quaternion.Euler (0, 0, 0);
+	private bool restartEnabled = false;
 
 	//private bool inputP1 = true;
 	//private bool inputP2 = true;
@@ -68,8 +69,19 @@ public class InputController : MonoBehaviour
 		return true;
 	}
 
+	public void EnableRestart()
+	{
+		restartEnabled = true;
+	}
+
 	void Update ()
 	{
+		if (restartEnabled) if (Input.GetKeyDown(selectButton))
+		{
+			MCP.singleton.StartGame();
+			restartEnabled = false;
+		}
+
 		if (!leftRightControls)	p1Rotation = GetRotationByKeys (p1UpKey, p1DownKey, p1LeftKey, p1RightKey);
 		bool noInput1 = noInput;
 		if (!leftRightControls) p2Rotation = GetRotationByKeys (p2UpKey, p2DownKey, p2LeftKey, p2RightKey);
