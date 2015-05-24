@@ -17,6 +17,15 @@ public class Fighter : MonoBehaviour
 	private ShieldControl shield;
 	private Fighter otherPlayer;
 	private AudioController auCon;
+	private Animation anim;
+
+	public string idleAnimation = "Idle_Anim";
+	public string boostAnimation = "Boost_Anim";
+	//public string noAnimation = "Default_NoAnim_";
+	public string dieAnimation = "Die_Anim";
+	public string spawnAnimation = "Spawn_Anim";
+	public string shootAnimation = "Shoot_Anim";
+	public string respawnAnimation = "Spawn_Anim";
 
 	private Vector3 startingPosition;
 	private Quaternion startingRotaion;
@@ -40,6 +49,8 @@ public class Fighter : MonoBehaviour
 		shield = GetComponentInChildren<ShieldControl>();
 		rBody = GetComponent<Rigidbody2D> ();
 		partSys = GetComponent<ParticleSystem>();
+		anim = GetComponentInChildren<Animation> ();
+		LockInput (true);
 
 		partSys.enableEmission = false;
 
@@ -100,15 +111,16 @@ public class Fighter : MonoBehaviour
 		}
 		ammo--;
 		cannon.Fire ();
+		anim.CrossFadeQueued (shootAnimation, 0.3f, QueueMode.PlayNow);
 		//Debug.Log ("Fires cannon on " + gameObject.name);
 		GUIController.singleton.UpdateHUD ();
 		return true;
 	}
 
 	/// <summary>
-	/// Activates shield on this ship, if loaded
+	/// Activates shield on this ship, if loaded. UNUSED NOT IMPLEMENTED
 	/// </summary>
-	public bool ShieldImpact()
+	private bool ShieldImpact()
 	{
 		if (shields < 1)
 		{
@@ -142,6 +154,7 @@ public class Fighter : MonoBehaviour
 		rBody.AddRelativeForce(new Vector2(pS.movementSpeed,0));
 
 		boosts--;
+		anim.CrossFadeQueued (boostAnimation, 0.3f, QueueMode.PlayNow);
 		Debug.Log ("Deploys boost on " + gameObject.name);
 		GUIController.singleton.UpdateHUD ();
 		return true;
@@ -171,8 +184,10 @@ public class Fighter : MonoBehaviour
 	{
 		auCon.PlayShipExplosionSFX ();
 		LockInput (true);
+		if (!dead) anim.Play (dieAnimation);
 		MCP.singleton.KillPlayer (this);
 		rBody.gravityScale = 0.2f;
+		dead = true;
 		partSys.enableEmission = true;
 	}
 	
@@ -185,7 +200,6 @@ public class Fighter : MonoBehaviour
 		if (IsDead()) return true;
 		auCon.PlayGoingDownSFX ();
 		lives--;
-		dead = true;
 		GUIController.singleton.UpdateHUD ();
 		return (lives > 0);
 	}
@@ -214,6 +228,8 @@ public class Fighter : MonoBehaviour
 	public void Respawn()
 	{
 		if (lives < 1) return;
+		anim.Play (respawnAnimation);
+		anim.PlayQueued (idleAnimation);
 		LockInput (false);
 		dead = false;
 		partSys.enableEmission = false;
@@ -257,6 +273,16 @@ public class Fighter : MonoBehaviour
 	public int GetShields()
 	{
 		return shields;
+	}
+
+	public void RotateLeft()
+	{
+		transform.Rotate(0, 0, Time.deltaTime * pS.rotationSpeed);
+	}
+
+	public void RotateRight()
+	{
+		transform.Rotate(0,0, -Time.deltaTime * pS.rotationSpeed);
 	}
 
 	/// <summary>
