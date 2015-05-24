@@ -18,7 +18,6 @@ public class ShieldControl : MonoBehaviour
 			//if (!other.gameObject.GetComponent<Projectile>().hasInteracted)
 			//{
 				GetComponentInParent<Fighter>().AbsorbAmmo();
-				GetComponentInParent<Fighter>().AbsorbAmmo();
 				//other.gameObject.GetComponent<Projectile>().hasInteracted = true;
 				Destroy (other.gameObject);
 			//}

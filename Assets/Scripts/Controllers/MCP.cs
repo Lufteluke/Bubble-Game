@@ -48,7 +48,8 @@ public class MCP : MonoBehaviour {
 
 		if (!GetGuCon ().PrepareData ()) Debug.LogError("Failed to prepare");
 
-		StartGame ();
+
+		MainMenu ();
 	}
 
 	/// <summary>
@@ -56,8 +57,22 @@ public class MCP : MonoBehaviour {
 	/// </summary>
 	public void StartGame()
 	{
+		GetGuCon().StartGame ();
+		AudioController.singleton.PlayMainTrack ();
 		GetPlayerOne ().StartGame ();
 		GetPlayerTwo ().StartGame ();
+	}
+
+	public void GameOver()
+	{
+		GetGuCon ().GameOver ();
+		AudioController.singleton.PlayFanfare ();
+	}
+
+	public void MainMenu ()
+	{
+		GUIController.singleton.MainMenu ();
+		AudioController.singleton.PlayMenuTrack ();
 	}
 
 	/// <summary>
@@ -72,8 +87,12 @@ public class MCP : MonoBehaviour {
 			if (player.RemoveLifeAndReportSurvival())
 			{
 				StartCoroutine(RespawnWithDelay());
+			}
+			else
+			{
 				player.Loss();
 				other.Victory();
+				GameOver();
 			}
 		}
 		else
@@ -90,6 +109,7 @@ public class MCP : MonoBehaviour {
 	{
 		GetGuCon().UpdateHUD ();
 		yield return new WaitForSeconds(PlayerSettings.singleton.respawnDelay);
+		foreach (GameObject o in GameObject.FindGameObjectsWithTag("Projectile")) Destroy(o);
 		GetPlayerOne ().Respawn ();
 		GetPlayerTwo ().Respawn ();
 	}
